@@ -51,8 +51,8 @@ project.afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("maven") {
-                groupId = "com.github.calamitydeadshot.coil-pdf"
-                artifactId = "library"
+                groupId = "com.github.calamitydeadshot"
+                artifactId = "coil-pdf"
                 version = "0.0.1"
                 logger.info("Components: [${components.joinToString()}]")
                 from(components["release"])
