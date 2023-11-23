@@ -17,5 +17,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "coil-pdf"
-include(":sample")
+//include(":sample")
 include(":coil-pdf")
