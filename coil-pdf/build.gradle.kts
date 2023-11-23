@@ -50,12 +50,17 @@ android {
 project.afterEvaluate {
     publishing {
         publications {
-            create<MavenPublication>("maven") {
+            register("release", MavenPublication::class) {
                 groupId = "com.github.calamitydeadshot"
                 artifactId = "coil-pdf"
                 version = "0.0.1"
-                logger.info("Components: [${components.joinToString()}]")
                 from(components["release"])
+            }
+        }
+        repositories {
+            maven {
+                name = "com.github.calamitydeadshot"
+                url = uri(layout.buildDirectory.dir("repo"))
             }
         }
     }
